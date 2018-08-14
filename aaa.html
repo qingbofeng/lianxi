@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://lib.baomitu.com/vue/2.5.17/vue.js"></script>
+	</head>
+	<style>
+		.con{
+			width: 300px;
+			height: 300px;
+			background: #000;
+		}
+	</style>
+	<body>
+		<div id="box">
+			<input type="number" v-model="w"/>
+			<input type="number" v-model="h"/>
+			<div class="con" v-bind:style="{width:w+'px',height:h+'px'}"></div>
+		</div>
+		<script>
+			new Vue({
+				el:'#box',
+				data:{
+					h:300,
+					w:300
+				}
+			})
+		</script>
+	</body>
+</html>
